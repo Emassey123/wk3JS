@@ -14,10 +14,10 @@ class Person {
         this.job = job;
         this.age = age;
     }
-    exercise () {
+    exercise = () => {
         console.log(`My name is ${this.name} I am ${this.age} years old and I love to jump rope!`)
     }
-    fetchJob () {
+    fetchJob = () => {
         console.log(`${this.name} is a ${this.job}`)
     }
 };
@@ -30,23 +30,23 @@ class Programmer extends Person {
         this.languages = languages;
         this.isBusy = true;
     }
-    completeTask(){
+    completeTask = () =>{
         this.isBusy = false;
     }
-    acceptNewTask(){
+    acceptNewTask = () =>{
         this.isBusy = true;
     }
-    offerNewTask(){
+    offerNewTask = () =>{
         if(this.isBusy){
             console.log(`${this.name} would love to take on a new responsibility.`);
         }else{
             console.log(`${this.name} can't accept any new tasks right now.`);
         }
     }
-    learnLanguages(x){
+    learnLanguages = (x) => {
         this.languages.push(x)
     }
-    listLanguages(){
+    listLanguages = () => {
         console.log(this.languages);
     }
 };
